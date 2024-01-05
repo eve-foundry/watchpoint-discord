@@ -12,14 +12,14 @@ discord-py = "^2.3.2"
 python-dotenv = "^1.0.0"
 commitizen = "^3.13.0"
 
-
-
 [tool.commitizen]
 name = "cz_conventional_commits"
 tag_format = "$version"
 version_scheme = "semver"
 version_provider = "poetry"
 update_changelog_on_bump = true
+post_bump_hooks = ["git push origin $CZ_POST_CURRENT_TAG_VERSION"]
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
