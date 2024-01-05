@@ -18,7 +18,7 @@ tag_format = "$version"
 version_scheme = "semver"
 version_provider = "poetry"
 update_changelog_on_bump = true
-post_bump_hooks = ["git push origin $CZ_POST_CURRENT_TAG_VERSION"]
+post_bump_hooks = ["git push","git push origin $CZ_POST_CURRENT_TAG_VERSION"]
 
 [build-system]
 requires = ["poetry-core"]
